@@ -29,4 +29,9 @@ public class StringCalculatorTest {
 	public void shouldReturnSumOfNumbersSeparatedByNewLineDelimiter() {
 		assertEquals(9,calculator.add("2\n3,4"));
 	}
+	
+	@Test
+	public void shouldReturnSumOfNumbersSeparatedByCustomDelimiter() {
+		assertEquals(7,calculator.add("//;\n1;6"));
+	}
 }

@@ -6,7 +6,12 @@ public class StringCalculator {
 		if (inputString.isEmpty())
 			return 0;
 		String delimiter = ",|\n";
-		String[] stringArray = findArray(inputString, delimiter);
+		String newString=inputString;
+		if(inputString.startsWith("//")) {
+			delimiter=inputString.substring(2,3);
+			newString=inputString.substring(4);
+		}
+		String[] stringArray = findArray(newString, delimiter);
 		int sum = calculateSum(stringArray);
 		return sum;
 	}
