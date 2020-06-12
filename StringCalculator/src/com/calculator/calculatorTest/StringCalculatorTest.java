@@ -15,4 +15,18 @@ public class StringCalculatorTest {
 		assertEquals(0,calculator.add(""));
 	}
 	
+	@Test
+	public void shouldReturnSingleNumber() {
+		assertEquals(1,calculator.add("1"));
+	}
+	
+	@Test
+	public void shouldReturnSumOfNumbersSeparatedByCommas() {
+		assertEquals(5,calculator.add("2,3"));
+	}
+	
+	@Test
+	public void shouldReturnSumOfNumbersSeparatedByNewLineDelimiter() {
+		assertEquals(9,calculator.add("2\n3,4"));
+	}
 }
