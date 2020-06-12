@@ -2,6 +2,8 @@ package com.calculator;
 
 public class StringCalculator {
 
+	private static final String PREFIX = "//";
+
 	public int add(String inputString) {
 		if (inputString.isEmpty())
 			return 0;
@@ -13,7 +15,7 @@ public class StringCalculator {
 
 	private String findString(String inputString) {
 		String newString = inputString;
-		if (inputString.startsWith("//")) {
+		if (inputString.startsWith(PREFIX)) {
 			newString = inputString.substring(4);
 		}
 		return newString;
@@ -21,7 +23,7 @@ public class StringCalculator {
 
 	private String findDelimiter(String inputString) {
 		String delimiter = ",|\n";
-		if (inputString.startsWith("//")) {
+		if (inputString.startsWith(PREFIX)) {
 			delimiter = inputString.substring(2, 3);
 		}
 		return delimiter;

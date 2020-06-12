@@ -33,7 +33,7 @@ public class StringCalculatorTest {
 
 	@Test
 	public void shouldReturnSumOfNumbersSeparatedByCustomDelimiter() {
-		assertEquals(7, calculator.add("//;\n1;6"));
+		assertEquals(7, calculator.add("//,\n1,6"));
 	}
 
 	@Test
@@ -50,4 +50,6 @@ public class StringCalculatorTest {
 	public void ignoreNumbersGreaterThanThousand() {
 		assertEquals(2, calculator.add("2,1001"));
 	}
+	
+
 }
